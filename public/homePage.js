@@ -87,7 +87,6 @@ fw.addUserCallback = data => {
             fw.clearTable();
             fw.fillTable(response.data);
             mm.updateUsersList(response.data);
-            ProfileWidget.showProfile(data);
             fw.setMessage(response.success, 'Пользователь успешно добавлен')
         }else{
             fw.setMessage(response.success, response.error)
@@ -102,7 +101,6 @@ fw.removeUserCallback = data => {
             fw.clearTable();
             fw.fillTable(response.data);
             mm.updateUsersList(response.data);
-            ProfileWidget.showProfile(data)
             fw.setMessage(response.success, 'Пользователь успешно удален')
         }else{
             fw.setMessage(response.success, response.error)
